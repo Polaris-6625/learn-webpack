@@ -29,7 +29,7 @@ const App = () => {
     } else if (hash === "#information") {
       return <Information/>;
     } else {
-      return <div>寄了</div>;
+      return <div>怎么寄了...</div>;
     }
   };
   function hashChange(targetHashValue) {

@@ -5,8 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npx webpack serve",
-    "build": "npx webpack"
+    "dev": "npx webpack serve --mode development",
+    "prod": "npx webpack serve --mdoe production",
+    "build": "npx webpack",
+    "build:prod": "npx webpack --mode production",
+    "build:dev": "npx webpack --mode development",
+    "pre": "npx webpack serve --mode production --open"
   },
   "keywords": [],
   "author": "",
