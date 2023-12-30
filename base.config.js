@@ -2,7 +2,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 
 const baseConfig = {
-  entry: "./src/main.js",
+  entry: "./src/main.tsx",
   output: {
     filename: "[name].js",
     path: path.join(__dirname, "./dist"),
@@ -29,6 +29,11 @@ const baseConfig = {
           },
         },
       },
+      {
+        test: /\.tsx?$/,
+        exclude: /node_modules/,
+        use: "ts-loader",
+      }
     ],
   },
   plugins: [
@@ -39,7 +44,7 @@ const baseConfig = {
     // new webpack.HotModuleReplacementPlugin()
   ],
   resolve: {
-    extensions: [".js", ".jsx"], // 添加js和jsx扩展名解析
+    extensions: [".js", ".jsx",'.ts',".tsx"], // 添加js和jsx扩展名解析
   },
 };
 
