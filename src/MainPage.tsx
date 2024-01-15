@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './global.css';
 import IndexPage from './pages/index';
 import Information from './pages/information';
+import GlobalStyle from '../global.style';
 
 const MainPage: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(window.location.pathname);
@@ -39,6 +40,7 @@ const MainPage: React.FC = () => {
   return (
     <>
       <div>
+        <GlobalStyle/>
         <button onClick={() => navigateTo('index')}>index</button>
         <button onClick={() => navigateTo('information')}>information</button>
       </div>

@@ -15,6 +15,14 @@ const IndexPage: React.FC = () => {
         name: "xxxx",
         age: "18 years old"
     }
+    type PType = {
+        name: string;
+        age: number;
+    }
+    type PickPType = Partial<PType>
+    const pickTypeValue: PickPType = {
+        name: "xxxxxxxxxx"
+    }
     interface People {
         name: string,
         age: number,
@@ -26,6 +34,7 @@ const IndexPage: React.FC = () => {
     const newPeople: NewPeople = {
         name: "xxx"
     }
+    console.log(pickTypeValue.age);
     console.log(newPeople.name);
     return (
         <>
